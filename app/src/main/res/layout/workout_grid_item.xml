@@ -10,13 +10,13 @@
         android:id="@+id/grid_item_label"
         android:layout_weight="0.8"
         android:gravity="center_horizontal"
-        android:text="Letter" />
+        android:text="Workout" />
 
     <TextView
         android:layout_width="60sp"
         android:textSize="30sp"
         android:layout_height="60sp"
-        android:id="@+id/grid_item_letter"
+        android:id="@+id/grid_item_workout"
         android:layout_weight="1"
         android:gravity="center_horizontal"
         android:text="A" />

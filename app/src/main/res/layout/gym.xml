@@ -4,21 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+
     tools:context="com.example.nyambura.myfitness.WorkoutActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Restaurants near "
+        android:text="Gyms near "
+        android:textColor="@color/colorTextIcons"
         android:id="@+id/locationTextView"
         android:layout_centerHorizontal="true" />
 
-    <ListView
+    <!--<ListView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/listView"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:textColor="@color/colorTextIcons"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_below="@+id/locationTextView" />-->
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/listView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/locationTextView" />
+        android:id="@+id/recyclerView"/>
 
 </RelativeLayout>

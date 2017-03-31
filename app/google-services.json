@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1086142060792",
+    "firebase_url": "https://myfitness-6f921.firebaseio.com",
+    "project_id": "myfitness-6f921",
+    "storage_bucket": "myfitness-6f921.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086142060792:android:4fa20a8020c27420",
+        "android_client_info": {
+          "package_name": "com.example.nyambura.myfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086142060792-5p57demsic5fgkpr9umekaji2oiir9hj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nyambura.myfitness",
+            "certificate_hash": "62d19ccca619eba45fbca30948982d97ff3a62f7"
+          }
+        },
+        {
+          "client_id": "1086142060792-uk7u6g90gm8kpm0s29eipacdj2poi52t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBldYBOJ1c2bjs2Xj0kErqJXnoazS9SxRc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086142060792-uk7u6g90gm8kpm0s29eipacdj2poi52t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

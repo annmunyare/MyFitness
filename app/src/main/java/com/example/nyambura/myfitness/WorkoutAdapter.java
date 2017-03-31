@@ -19,7 +19,7 @@ public class WorkoutAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mLetters.length;
+        return mWorkouts.length;
     }
 
     @Override
@@ -45,12 +45,12 @@ public class WorkoutAdapter extends BaseAdapter {
 
 
             // pull views
-            TextView letterView = (TextView) gridView
-                    .findViewById(R.id.grid_item_letter);
+            TextView workoutView = (TextView) gridView
+                    .findViewById(R.id.grid_item_workout);
 
             // set values into views
-            letterView.setText(mLetters[position]);
-            letterView.setTypeface(mTypeface);// using dummy data for now
+            workoutView.setText(mWorkouts[position]);
+            workoutView.setTypeface(mTypeface);// using dummy data for now
         } else {
             gridView = (View) convertView;
         }
@@ -58,12 +58,12 @@ public class WorkoutAdapter extends BaseAdapter {
     }
 
     private Context mContext;
-    private String[] mLetters;
+    private String[] mWorkouts;
     private Typeface mTypeface;
 
-    public WorkoutAdapter (Context context, String[] letters, Typeface typeface){
+    public WorkoutAdapter (Context context, String[] workouts, Typeface typeface){
         this.mContext = context;
-        this.mLetters = letters;
+        this.mWorkouts = workouts;
         this.mTypeface = typeface;
     }
 

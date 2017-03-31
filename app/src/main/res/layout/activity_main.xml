@@ -7,28 +7,29 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/res"
-        android:scaleType="centerCrop" />
+
+
+        android:background="@drawable/fit"
+        android:scaleType="centerCrop"
+
+         />
 
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
         android:text="@string/app_name"
-        android:textColor="@color/colorTextIcons"
+        android:textColor="@color/colorAccent"
         android:textSize="40sp"
          />
     <Button
-        android:id="@+id/recipeButton"
-        android:layout_width="match_parent"
+        android:id="@+id/bmiButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:text="Recipe"
+        android:text="BMI"
         android:textColor="@color/colorTextIcons"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/findGymButton"
@@ -36,33 +37,46 @@
         android:layout_marginBottom="215dp" />
     <Button
         android:id="@+id/workoutButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:text="Workout"
         android:textColor="@color/colorTextIcons"
         android:layout_marginBottom="22dp"
-        android:layout_above="@+id/recipeButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/bmiButton" />
     <EditText
         android:id="@+id/locationEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/findGymButton"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
+
+        android:layout_marginBottom="15dp"
         android:background="@color/colorTextIcons"
-        android:hint="Enter Town Name "
-        android:padding="5dp" />
+        android:hint="Enter Zip Code "
+        android:padding="5dp"
+        android:layout_above="@+id/findGymButton"
+        android:layout_centerHorizontal="true" />
+
 
     <Button
-        android:id="@+id/findGymButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Find A Gym"
+        android:id="@+id/findGymButton"
         android:background="@color/colorAccent"
-        android:text="Find A Gym Near You"
         android:textColor="@color/colorTextIcons"
+        android:visibility="visible"
+        android:layout_above="@+id/savedGymsButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Saved Gyms"
+        android:id="@+id/savedGymsButton"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorTextIcons"
+        android:visibility="visible"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

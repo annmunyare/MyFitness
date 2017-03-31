@@ -22,8 +22,8 @@ import butterknife.ButterKnife;
 public class WorkoutActivity extends AppCompatActivity {
     GridView gridView;
 
-    String[] letters = new String[] {
-            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
+    String[] workouts = new String[] {
+            "Abs", "Arms", "Butt", "Fullbody"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class WorkoutActivity extends AppCompatActivity {
 
         gridView = (GridView) findViewById(R.id.baseGridView);
 
-        gridView.setAdapter(new WorkoutAdapter(this, letters, typeface));
+        gridView.setAdapter(new WorkoutAdapter(this, workouts, typeface));
 
 
     }

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,7 +40,8 @@ public class GymDetailFragment extends Fragment implements View.OnClickListener 
     @Bind(R.id.websiteTextView) TextView mWebsiteLabel;
     @Bind(R.id.phoneTextView) TextView mPhoneLabel;
     @Bind(R.id.addressTextView) TextView mAddressLabel;
-    @Bind(R.id.savedGymsButton) TextView mSavedGymsButton;
+    @Bind(R.id.saveGymButton)
+    Button mSaveGymButton;
 
     private Gym mGym;
 
@@ -75,7 +77,7 @@ public class GymDetailFragment extends Fragment implements View.OnClickListener 
         mAddressLabel.setText(android.text.TextUtils.join(", ", mGym.getAddress()));
 
         mPhoneLabel.setOnClickListener(this);
-        mSavedGymsButton.setOnClickListener(this);
+        mSaveGymButton.setOnClickListener(this);
 
         return view;
     }
@@ -86,7 +88,7 @@ public class GymDetailFragment extends Fragment implements View.OnClickListener 
                     Uri.parse("tel:" + mGym.getPhone()));
             startActivity(phoneIntent);
         }
-        if (v == mSavedGymsButton) {
+        if (v == mSaveGymButton) {
             DatabaseReference restaurantRef = FirebaseDatabase
                     .getInstance()
                     .getReference(Constants.FIREBASE_CHILD_GYMS);

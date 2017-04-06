@@ -23,7 +23,6 @@
         </activity>
         <activity android:name=".BmiActivity" />
         <activity android:name=".GymDetailActivity" />
-        <activity android:name=".SavedGymListActivity" />
         <activity android:name=".CreateAccountActivity" />
         <activity android:name=".LoginActivity"><intent-filter>
             <action android:name="android.intent.action.MAIN" />

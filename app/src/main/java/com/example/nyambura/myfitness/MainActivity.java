@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.findGymButton) Button mFindGymButton;
     @Bind(R.id.bmiButton) Button mBmiButton;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
-    @Bind(R.id.savedGymsButton) Button mSavedGymsButton;
+
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     @Override
@@ -38,18 +38,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAppNameTextView.setTypeface(ostrichFont);
         mFindGymButton.setOnClickListener(this);
         mBmiButton.setOnClickListener(this);
-        mSavedGymsButton.setOnClickListener(this);
+
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-//                if (user != null) {
-//                    getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
-//                } else {
-//
-//
-//                }
+                if (user != null) {
+                    getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
+                } else {
+
+
+                }
             }
         };
     }
@@ -93,10 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, GymListActivity.class);
             startActivity(intent);
         }
-        if (v == mSavedGymsButton) {
-            Intent intent = new Intent(MainActivity.this, SavedGymListActivity.class);
-            startActivity(intent);
-        }
+
         if (v == mBmiButton) {
             Intent intent = new Intent(MainActivity.this, BmiActivity.class);
             startActivity(intent);

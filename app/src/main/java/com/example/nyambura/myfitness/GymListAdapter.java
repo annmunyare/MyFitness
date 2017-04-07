@@ -28,6 +28,7 @@ public class GymListAdapter extends RecyclerView.Adapter<GymListAdapter.GymViewH
     private static final int MAX_HEIGHT = 200;
     private ArrayList<Gym> mGyms = new ArrayList<>();
     private Context mContext;
+
     public GymListAdapter(Context context, ArrayList<Gym> gyms) {
         mContext = context;
         mGyms = gyms;
@@ -38,20 +39,25 @@ public class GymListAdapter extends RecyclerView.Adapter<GymListAdapter.GymViewH
         GymViewHolder viewHolder = new GymViewHolder(view);
         return viewHolder;
     }
+
     @Override
     public void onBindViewHolder(GymListAdapter.GymViewHolder holder, int position) {
         holder.bindGym(mGyms.get(position));
     }
+
     @Override
     public int getItemCount() {
         return mGyms.size();
     }
+
     public class GymViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         @Bind(R.id.gymImageView) ImageView mGymImageView;
         @Bind(R.id.gymNameTextView) TextView mNameTextView;
         @Bind(R.id.categoryTextView) TextView mCategoryTextView;
         @Bind(R.id.ratingTextView) TextView mRatingTextView;
+
         private Context mContext;
+
         public GymViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);

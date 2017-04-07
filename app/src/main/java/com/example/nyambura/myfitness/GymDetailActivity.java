@@ -20,8 +20,10 @@ public class GymDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gym_detail);
         ButterKnife.bind(this);
+
         mGyms = Parcels.unwrap(getIntent().getParcelableExtra("gyms"));
         int startingPosition = Integer.parseInt(getIntent().getStringExtra("position"));
+
         adapterViewPager = new GymPagerAdapter(getSupportFragmentManager(), mGyms);
         mViewPager.setAdapter(adapterViewPager);
         mViewPager.setCurrentItem(startingPosition);

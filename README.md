@@ -3,6 +3,6 @@ An Android Application that searches for gyms in your area and also calculate th
 ## Author
 Ann Munyare
 ### Technologies Used
-Java
-Andriod SDK
-Firebase
+#### Java
+#### Andriod SDK
+#### Firebase
